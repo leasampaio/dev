@@ -1,12 +1,11 @@
-select *
+select name, country 
 from (
 	select 
-		unnest (string_to_array(casting, ',') ) as elenco,count(*) 
+		unnest (string_to_array(casting, ',') ) as name, count(*) 
 	from 
 		netflix
-	group by elenco
+	group by name
 	order by count(*) desc
 	limit 10
 	)as atores
-where atores.count between 10 and 30 and not ( atores.count between 15 and 20)
 	; 
