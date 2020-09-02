@@ -1,0 +1,20 @@
+body{
+    margin: 4em;
+  
+}
+ul{
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+}
+li{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+li input {
+    margin-right: 1em;
+}
+li button{
+    margin-left: auto;
+}
