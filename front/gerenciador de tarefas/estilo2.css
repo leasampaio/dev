@@ -1,0 +1,15 @@
+div{
+    height: 400px;
+    width: 400px;
+    background-color: rosybrown;
+    border: 2px solid ;
+    border-radius: 5px;
+}
+button{
+    height: 100px;
+    width: 200px;
+    margin: 100px;
+    border-radius: 25px;
+    background-color: white;
+    color:  rosybrown;
+}

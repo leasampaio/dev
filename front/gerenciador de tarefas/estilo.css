@@ -18,3 +18,7 @@ li input {
 li button{
     margin-left: auto;
 }
+.done span {
+    text-decoration: line-through;
+}
+
