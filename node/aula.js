@@ -8,9 +8,12 @@ const fs = require("fs");
     }
     console.log(buffer.toString());
 }) */
-const conteudo = "olá, mundo";
+const conteudo = "Parabéns";
 fs.writeFile("saida.txt",conteudo, (err)=>{
     if (err){
         console.log(err);
+    }
+    else{
+        console.log(conteudo);
     }
 })

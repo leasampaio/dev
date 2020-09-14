@@ -13,12 +13,7 @@ function marcarComoFeito (evento){
     const checkbox = evento.target;
     const tarefa = checkbox.closest("li");
 
-    if(checkbox.checked){
-        feitas.append(tarefa);
-    }
-    else{
-        aFazer.append(tarefa);
-    }
+    checkbox.checked ? feitas.append(tarefa) : aFazer.append(tarefa);
 }
 
 form.addEventListener("submit", event => {
