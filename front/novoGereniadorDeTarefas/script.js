@@ -1,6 +1,6 @@
 const formulario = document.querySelector("form");
-const checkboxTodos = document.querySelector("#checkbox-todos");
-const botaoFiltroTodas = document.querySelector("#botao-todas");
+const checkboxGeral = document.querySelector("#checkbox-todos");
+const botaoFiltroTodos = document.querySelector("#botao-todas");
 const botaoDeFiltroAFazer = document.querySelector("#botao-a-fazer");
 const botaoDeFiltroFeitos = document.querySelector("#botao-feitas");
 const botaoLimparFeitas = document.querySelector("#botao-limpar");
@@ -20,10 +20,10 @@ function atualizarContadorGeral (){
     const contagemAFazer = listaAFazer.querySelectorAll("li").length;
     const contagemFeitas = listaFeitas.querySelectorAll("li").length;
     if(contagemAFazer === 0 && contagemFeitas > 0){
-        checkboxTodos.checked= true 
+        checkboxGeral.checked= true 
     }
     else{
-        checkboxTodos.checked = false;
+        checkboxGeral.checked = false;
 
     }
 
@@ -64,7 +64,7 @@ formulario.addEventListener("submit", event =>{
     atualizarContadorGeral ();
 })
 
-checkboxTodos.addEventListener("input", ()=>{
+checkboxGeral.addEventListener("input", ()=>{
     //marcar ou desmarcar todas como feitas
     const tarefasAfazer = listaAFazer.querySelectorAll("li");
     for (const tarefaAfazer of tarefasAfazer){
@@ -79,7 +79,7 @@ checkboxTodos.addEventListener("input", ()=>{
 
     atualizarContadorGeral ();
 })
-botaoFiltroTodas.addEventListener("click", ()=>{
+botaoFiltroTodos.addEventListener("click", ()=>{
     //Mostra todas as tarefas feitas e a fazer
 })
 botaoDeFiltroAFazer.addEventListener("click", ()=>{
